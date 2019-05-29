@@ -30,20 +30,42 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# https://github.com/viewflow/django-material/blob/master/demo/settings.py
+# DEV_APPS = (
+#     'autofixture',
+#     'template_debug',
+# )
+
+
 INSTALLED_APPS = [
+    'material',
+    'material.frontend',
+    'material.admin',
+    # 'material.theme.amber'
+
+    'viewflow',
+    'viewflow.frontend',
+
+    'demo.helloworld',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
-    'material',
-    'material.frontend',
-    'viewflow',
-    'viewflow.frontend',
-    'demo.helloworld',
+    # test admin apps
+    'django.contrib.flatpages',
+    'django.contrib.redirects',
+    'django.contrib.sites',
 ]
+
+# auto cache invalidation for static files.
+# https://blog.xoxzo.com/en/2018/08/22/cache-busting-in-django/
+# STATIC_ROOT = ''
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
