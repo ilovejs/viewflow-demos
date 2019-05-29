@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'viewflow',
     'viewflow.frontend',
 
+    # my apps
     'demo.helloworld',
+    'sales.apps.SalesConfig',     # this is module
 
     'django.contrib.admin',
     'django.contrib.auth',
